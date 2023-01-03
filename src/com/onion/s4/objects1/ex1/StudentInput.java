@@ -12,8 +12,10 @@ public class StudentInput {
 	public Student[] setStudent(Student[] students) {
 		Scanner sc = new Scanner(System.in);
 
+		// 인자값으로 전달받은 배열크기보다 1 큰 배열 생성
 		Student [] copy = new Student[students.length+1];
 		
+		//배열 복사
 		for(int i=0; i<students.length; i++) {
 			copy[i] = students[i];
 		}
@@ -35,6 +37,7 @@ public class StudentInput {
 		int total = kor+eng+math;
 		double avg = total/3.0;
 		
+		
 		Student newStudent = new Student();
 		newStudent.setName(name);
 		newStudent.setNum(num);
@@ -43,6 +46,8 @@ public class StudentInput {
 		newStudent.setMath(math);
 		newStudent.setTotal(total);
 		newStudent.setAvg(avg);
+		
+		//복사된 배열[기존배열길이값] = 학생객체;
 		copy[students.length] = newStudent;
 	
 		students = copy;

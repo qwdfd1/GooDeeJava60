@@ -1,6 +1,6 @@
 package com.onion.s4.objects2;
 
-public class Main {
+public class ReturnTestMain {
 	
 	public static void main(String[] args) {
 		ReturnTest returnTest = new ReturnTest();

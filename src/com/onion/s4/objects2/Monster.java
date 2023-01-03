@@ -5,6 +5,21 @@ public class Monster {
 	int power;
 	int hp;
 	
+	//생성자 Constructor
+	//전역변수보다 실행순위가 늦다 
+
+	public Monster() {
+		// 기본 생성자, 매개변수 X
+		this.power=50;
+		this.hp=60;
+		
+		System.out.println("생성자 실행");
+	}
+	
+	public Monster(int power) {
+		
+	}
+	
 	//멤버 메서드, instance method (행위)
 	public boolean checkvalue(Monster monster) {
 		//나의 파워와 hp가 같다면 true 리턴 false 리턴
