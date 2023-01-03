@@ -12,7 +12,7 @@ public class Main {
 		mc.start();
 		
 		
-		
+		System.out.println("집에서 추가");
 		System.out.println("Finish");
 		
 		
