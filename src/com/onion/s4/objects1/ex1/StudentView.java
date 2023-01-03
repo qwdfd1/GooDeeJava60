@@ -9,8 +9,7 @@ public class StudentView {
 	//viewOne 
 	//학생 한 명을 받아서 학생의 모든 정보를 출력
 	
-	public void viewOne(Student student) {
-		System.out.println("이름\t번호\t국어\t영어\t수학\t총점\t평균");
+	public void view(Student student) {
 		System.out.print(student.getName() + "\t");
 		System.out.print(student.getNum()  + "\t");
 		System.out.print(student.getKor() + "\t");
@@ -23,17 +22,12 @@ public class StudentView {
 	
 	//viewList
 	//학생 배열을 받아서 각 항목을 출력
-	public void viewList(Student [] students) {
+	public void view(Student [] students) {
 		
 		System.out.println("이름\t번호\t국어\t영어\t수학\t총점\t평균");
 		for(int i=0; i<students.length; i++) {
-			System.out.print(students[i].getName() + "\t");
-			System.out.print(students[i].getNum() + "\t");
-			System.out.print(students[i].getKor() + "\t");
-			System.out.print(students[i].getEng() + "\t");
-			System.out.print(students[i].getMath() + "\t");
-			System.out.print(students[i].getTotal() + "\t");
-			System.out.println(students[i].getAvg() + "\t");
+			Student student = students[i];
+			view(student);
 		}
 	}
 	

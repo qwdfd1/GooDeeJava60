@@ -22,38 +22,46 @@ public class MenuController {
 		int count = sc.nextInt();
 		Student [] students = new Student[count];
 		
+		//종료버튼을 누를때까지 반복실행
 		while(run) {
 			System.out.println("1. 학생 정보 입력 2. 학생 찾기 3. 학생 전체 정보 4. 학생 추가 출력 5. 종료");
 			
 			int action = sc.nextInt();
 			
+			//학생 정보 입력
 			if(action == 1) {
 				System.out.println("학생 등록");
 				si.setAllStudents(students);
 			}
+			
+			// 학생 찾기
 			else if(action == 2) {
 				System.out.println("학생 찾기");
 				Student student = si.findStudent(students); 
 				if(student != null) {
-					sv.viewOne(student);
+					sv.view(student);
 				}
 				else {
 					System.out.println("일치하는 학생의 정보가 없습니다.");
 				}
 				
 			}
+			// 학생 전체 정보
 			else if(action == 3) {
 				System.out.println("학생 정보");
-				sv.viewList(students);
+				sv.view(students);
 			}
+			// 학생 추가
 			else if(action == 4) {
 				students = si.setStudent(students);
 				System.out.println("추가되었습니다.");
 			}
+			// 프로그램 종료
 			else if(action == 5) {
 				run = false;
 				fin();
-			}			
+			}
+			//잘못 눌렀을 때
 			else {
 				System.out.println("잘못된 접근입니다");
 			}
