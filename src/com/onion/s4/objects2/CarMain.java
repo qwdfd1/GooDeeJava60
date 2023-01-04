@@ -9,8 +9,10 @@ public class CarMain {
 		Car c1 = new Car();
 		c1.info();
 		
-		Car c2 = new Car("Purple");
-		c2.info();
+		
+//		
+//		Car c2 = new Car("Purple");
+//		c2.info();
 				
 	
 	}
